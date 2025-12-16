@@ -42,4 +42,15 @@ router.post("/new", (req, res) => {
   res.redirect("/");
 });
 
+// rota para detalhes da mensagem
+router.get("/message/:id", (req, res) => {
+  const id = req.params.id;
+  const message = messages[id];
+
+  res.render("message", {
+    title: "Message Details",
+    message: message,
+  });
+});
+
 module.exports = router;

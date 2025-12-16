@@ -5,19 +5,21 @@
   <title><%= title %></title>
 </head>
 <body>
-  <h1><%= title %></h1>
+    <h1><%= title %></h1>
 
-  <a href="/new">➕ New Message</a>
+    <a href="/new">➕ New Message</a>
 
-  <ul>
-    <% messages.forEach(message => { %>
-      <li>
+    <ul>
+    <% messages.forEach((message, index) => { %>
+        <li>
         <strong><%= message.user %></strong>: 
         <%= message.text %>
         <br>
         <small><%= message.added.toLocaleString() %></small>
-      </li>
+        <br>
+        <a href="/message/<%= index %>">Open</a>
+        </li>
     <% }) %>
-  </ul>
+    </ul>
 </body>
 </html>
