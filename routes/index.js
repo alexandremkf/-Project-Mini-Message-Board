@@ -28,4 +28,18 @@ router.get("/new", (req, res) => {
   res.render("form", { title: "New Message" });
 });
 
+// rota para receber o formulário
+router.post("/new", (req, res) => {
+  const messageUser = req.body.messageUser;
+  const messageText = req.body.messageText;
+
+  messages.push({
+    text: messageText,
+    user: messageUser,
+    added: new Date(),
+  });
+
+  res.redirect("/");
+});
+
 module.exports = router;
