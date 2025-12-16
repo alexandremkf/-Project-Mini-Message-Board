@@ -16,5 +16,9 @@
     "url": "https://github.com/alexandremkf/-Project-Mini-Message-Board/issues"
   },
   "homepage": "https://github.com/alexandremkf/-Project-Mini-Message-Board#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.2.1"
+  }
 }
